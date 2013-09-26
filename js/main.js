@@ -22,10 +22,11 @@ $(function () {
   function splitArr(arr, cols) {
     var length = arr.length;
     var output = [];
-    var i = 0;
+    var i      = 0;
+    var size   = 0;
 
     while (i < length) {
-      var size = Math.ceil((length - i) / cols--);
+      size = Math.ceil((length - i) / cols--);
       output.push(arr.slice(i, i + size));
       i += size;
     }
